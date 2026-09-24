@@ -1,0 +1,22 @@
+CS585 Big Data Management — Project 1
+
+Assumptions
+• Customers and Transactions files have no column headers, as required.
+• Names and transaction descriptions contain only letters, so comma-separated parsing is safe.
+• Salary and TransTotal values are generated and reported to two decimal places.
+• Query 3.2 and Query 3.3 use a map-side join with the Customers dataset cached in each mapper.
+• If a customer has no transaction, Java Query 3.1 outputs count 0, total 0.00, and minimum items 0. This did not occur in the generated full dataset.
+• Pig scripts register commons-collections3-3.2.2.jar because the supplied Docker Pig/YARN environment requires it.
+
+Question | Status | Comment
+Q1 | Fully Working | Generated 50,000 Customers and 5,000,000 Transactions records.
+Q2 | Fully Working | Uploaded both datasets to /user/Project1/data/.
+Q3.1 | Fully Working | Customer/transaction join and transaction summary completed.
+Q3.2 | Fully Working | One MapReduce job produced country customer counts and transaction min/max.
+Q3.3 | Fully Working | Produced 12 age-range and gender groups with min/max/average transaction totals.
+Q4.1 | Fully Working | Returned all customer names with the minimum transaction count.
+Q4.2 | Fully Working | Returned country codes with customer count greater than 5,000 or less than 2,000.
+Q4.3 | Fully Working | Implemented Q3.3 analytics in Pig.
+
+Comments
+All Java MapReduce jobs and Pig scripts were executed successfully in the provided Docker Hadoop environment.
